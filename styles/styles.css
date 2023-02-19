@@ -5,9 +5,6 @@
     --light-Grayish-Blue: hsl(210, 46%, 95%);
 }
 
-
-
-
 html {
     font-family: 'Manrope', sans-serif;
     font-size: 13px;
@@ -19,6 +16,7 @@ html {
     align-items: center;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 .attribution {
@@ -35,6 +33,16 @@ html {
     margin-left: 10%;
 }
 
+
+button {
+    cursor: pointer;
+    border-style: none;
+    background-color: inherit;
+   display: inline;
+   padding: 0;
+}
+
+
 #container {
     background-color: var(--light-Grayish-Blue);
     display: flex;
@@ -44,14 +52,14 @@ html {
     border-radius: 15px;
 }
 
-#dot {
-    position: absolute;
-    right: 0;
-    opacity: 0.7;
+.dot {
     width: 40px;
     height: 40px;
-    background-color: var(--grayish-Blue);
     border-radius: 50%;
+    background-color: var(--grayish-Blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 h1 {
@@ -76,6 +84,7 @@ h3 {
     text-align: left;
     margin: 0;
     font-size: 1.2rem;
+    font-weight: 400;
 }
 
 header {
@@ -92,30 +101,29 @@ header img {
     border-radius: 15px 15px 0 0;
 }
 
-#icon {
-    position: relative;
-    display: flex;
-    border-radius: 50%;
-    justify-content: end;
-    align-items: center;
+#icon-reverse{
+display: flex;
+/* padding-left: 20%; */
+justify-content: center;
 }
 
-#icon img {
-    position: absolute;
-    right: 9.5px;
-    width: 20px;
-    height: 20px;
+#icon-reverse-background {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--desaturated-Dark-Blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 footer {
-    position: relative;
     display: grid;
     grid-template-columns: 20% 60% 20%;
-    flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    text-align: center;
+    width: 85%;
+    padding: 4% 0 4% 0;
 
 }
 
@@ -127,7 +135,7 @@ footer img {
 
 
 main {
-    padding: 3rem 2.6rem;
+    padding: 3rem 2rem 1.5rem 2rem;
 }
 
 p {
@@ -135,4 +143,56 @@ p {
     font-size: 1.2rem;
     line-height: 1.9rem;
     padding-bottom: 5%;
+}
+
+#share-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--grayish-Blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+
+.share-table {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    background-color: var(--very-Dark-Grayish-Blue);
+    width: 100%;
+    border-radius: 0 0 15px 15px;
+    align-items: center;
+    justify-content: center;
+    padding: 4% 0;
+}
+
+.share-table.hidden {
+    display: none;
+}
+
+#share-table-data {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: left;
+    align-items: center;
+    padding-left: 10%;
+}
+
+#share-table-data img {
+    padding-left: 1.5rem;
+    height: 2rem;
+}
+
+#share-table-data p {
+    display: inline-block;
+    padding: 0;
+    letter-spacing: 0.5rem;
+    color: var(--grayish-Blue);
+}
+
+#user-info {
+    display: flex;
+    flex-direction: row;
 }
